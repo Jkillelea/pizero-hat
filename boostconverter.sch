@@ -1,0 +1,298 @@
+EESchema Schematic File Version 4
+LIBS:pizero_hat-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "Raspberry Pi Zero Li-ion + sensor breakout hat"
+Date "2020-05-15"
+Rev "A"
+Comp "Jacob Killelea"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BoostConverters:NCP1421 U2
+U 1 1 5EBB7C23
+P 5950 3800
+F 0 "U2" H 5925 3965 50  0000 C CNN
+F 1 "NCP1421" H 5925 3874 50  0000 C CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 5950 3800 50  0001 C CNN
+F 3 "https://datasheet.octopart.com/NCP1421DMR2G-ON-Semiconductor-datasheet-163178.pdf" H 5950 3800 50  0001 C CNN
+	1    5950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5EBB7C29
+P 6350 3700
+F 0 "L1" H 6403 3746 50  0000 L CNN
+F 1 "10uH" H 6403 3655 50  0000 L CNN
+F 2 "Inductor_SMD:L_Wuerth_MAPI-2512" H 6350 3700 50  0001 C CNN
+F 3 "~" H 6350 3700 50  0001 C CNN
+	1    6350 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3850 6350 3900
+Wire Wire Line
+	6350 3900 6300 3900
+$Comp
+L Device:CP C7
+U 1 1 5EBB7C31
+P 8100 4450
+F 0 "C7" H 8218 4496 50  0000 L CNN
+F 1 "22uF" H 8218 4405 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder" H 8138 4300 50  0001 C CNN
+F 3 "~" H 8100 4450 50  0001 C CNN
+	1    8100 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5EBB7C37
+P 8100 4650
+F 0 "#PWR018" H 8100 4400 50  0001 C CNN
+F 1 "GND" H 8105 4477 50  0000 C CNN
+F 2 "" H 8100 4650 50  0001 C CNN
+F 3 "" H 8100 4650 50  0001 C CNN
+	1    8100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4600 8100 4650
+$Comp
+L Device:R R9
+U 1 1 5EBB7C49
+P 7100 4800
+F 0 "R9" H 7170 4846 50  0000 L CNN
+F 1 "120k" H 7170 4755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7030 4800 50  0001 C CNN
+F 3 "~" H 7100 4800 50  0001 C CNN
+	1    7100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5EBB7C4F
+P 7450 4800
+F 0 "C8" H 7335 4754 50  0000 R CNN
+F 1 "10pF" H 7335 4845 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7488 4650 50  0001 C CNN
+F 3 "~" H 7450 4800 50  0001 C CNN
+	1    7450 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C5
+U 1 1 5EBB7C55
+P 3550 3850
+F 0 "C5" H 3668 3896 50  0000 L CNN
+F 1 "22uF" H 3668 3805 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-2012-12_Kemet-R_Pad1.30x1.05mm_HandSolder" H 3588 3700 50  0001 C CNN
+F 3 "~" H 3550 3850 50  0001 C CNN
+	1    3550 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3500 4400 3500
+Connection ~ 5450 3500
+Wire Wire Line
+	5450 3900 5450 3500
+Wire Wire Line
+	5550 3900 5450 3900
+$Comp
+L power:GND #PWR015
+U 1 1 5EBB7C60
+P 3550 4600
+F 0 "#PWR015" H 3550 4350 50  0001 C CNN
+F 1 "GND" H 3555 4427 50  0000 C CNN
+F 2 "" H 3550 4600 50  0001 C CNN
+F 3 "" H 3550 4600 50  0001 C CNN
+	1    3550 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 3500
+Wire Wire Line
+	3550 3700 3550 3500
+Wire Wire Line
+	6350 3500 5450 3500
+$Comp
+L Device:C C6
+U 1 1 5EBB7C75
+P 5400 4400
+F 0 "C6" H 5285 4354 50  0000 R CNN
+F 1 "200nF" H 5285 4445 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5438 4250 50  0001 C CNN
+F 3 "~" H 5400 4400 50  0001 C CNN
+	1    5400 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EBB7C7B
+P 5400 4600
+F 0 "#PWR017" H 5400 4350 50  0001 C CNN
+F 1 "GND" H 5405 4427 50  0000 C CNN
+F 2 "" H 5400 4600 50  0001 C CNN
+F 3 "" H 5400 4600 50  0001 C CNN
+	1    5400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4550 5400 4600
+$Comp
+L power:GND #PWR019
+U 1 1 5EBB7C83
+P 6350 4800
+F 0 "#PWR019" H 6350 4550 50  0001 C CNN
+F 1 "GND" H 6355 4627 50  0000 C CNN
+F 2 "" H 6350 4800 50  0001 C CNN
+F 3 "" H 6350 4800 50  0001 C CNN
+	1    6350 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4200 6350 4800
+$Comp
+L power:GND #PWR020
+U 1 1 5EBB7C8C
+P 7250 5150
+F 0 "#PWR020" H 7250 4900 50  0001 C CNN
+F 1 "GND" H 7255 4977 50  0000 C CNN
+F 2 "" H 7250 5150 50  0001 C CNN
+F 3 "" H 7250 5150 50  0001 C CNN
+	1    7250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5EBB7C93
+P 4400 3800
+F 0 "R6" H 4470 3846 50  0000 L CNN
+F 1 "56k" H 4470 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4330 3800 50  0001 C CNN
+F 3 "~" H 4400 3800 50  0001 C CNN
+	1    4400 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3650 4400 3500
+Connection ~ 4400 3500
+Wire Wire Line
+	4400 3500 3550 3500
+$Comp
+L power:GND #PWR016
+U 1 1 5EBB7C9C
+P 4400 4600
+F 0 "#PWR016" H 4400 4350 50  0001 C CNN
+F 1 "GND" H 4405 4427 50  0000 C CNN
+F 2 "" H 4400 4600 50  0001 C CNN
+F 3 "" H 4400 4600 50  0001 C CNN
+	1    4400 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4600 4400 4350
+Wire Wire Line
+	4400 4000 4400 3950
+Wire Wire Line
+	8100 4300 8100 4000
+Connection ~ 8100 4000
+Wire Wire Line
+	8100 4000 8500 4000
+Wire Wire Line
+	5550 4000 4400 4000
+Connection ~ 4400 4000
+$Comp
+L Device:R R7
+U 1 1 5EBB7CAA
+P 4400 4200
+F 0 "R7" H 4470 4246 50  0000 L CNN
+F 1 "47k" H 4470 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4330 4200 50  0001 C CNN
+F 3 "~" H 4400 4200 50  0001 C CNN
+	1    4400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4000 4400 4050
+Text Notes 3950 5000 0    50   ~ 0
+Set resistors such that there \nis 1.2V on LBI/EN at Vbatt = 2.6V\n
+Text Notes 6600 3900 0    50   ~ 0
+Vout = 1.2(1+R9/R8)
+Text HLabel 8500 4000 2    50   Output ~ 0
+Vboost
+Wire Wire Line
+	7100 4600 7450 4600
+Wire Wire Line
+	7450 4600 7450 4650
+Wire Wire Line
+	7100 4600 7100 4650
+Wire Wire Line
+	7100 5050 7250 5050
+Wire Wire Line
+	7250 5050 7250 5150
+Wire Wire Line
+	7100 4950 7100 5050
+Wire Wire Line
+	7450 4950 7450 5050
+Wire Wire Line
+	7450 5050 7250 5050
+Connection ~ 7250 5050
+Wire Wire Line
+	6350 4200 6300 4200
+$Comp
+L Device:R R8
+U 1 1 5EBB7C3F
+P 7100 4300
+F 0 "R8" H 7030 4346 50  0000 R CNN
+F 1 "383k" H 7030 4255 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7030 4300 50  0001 C CNN
+F 3 "~" H 7100 4300 50  0001 C CNN
+	1    7100 4300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4000 7100 4000
+Wire Wire Line
+	7100 4000 7100 4150
+Wire Wire Line
+	7100 4450 7100 4500
+Connection ~ 7100 4600
+Connection ~ 7100 4000
+Wire Wire Line
+	7100 4000 8100 4000
+Wire Wire Line
+	6800 4100 6800 4500
+Wire Wire Line
+	6300 4100 6800 4100
+Wire Wire Line
+	7100 4500 6800 4500
+Connection ~ 7100 4500
+Wire Wire Line
+	7100 4500 7100 4600
+Text HLabel 5100 4100 0    50   Output ~ 0
+LBO
+Text HLabel 4200 4000 0    50   Output ~ 0
+LBI_EN
+Wire Wire Line
+	4400 4000 4200 4000
+Wire Wire Line
+	5400 4200 5400 4250
+Wire Wire Line
+	5400 4200 5550 4200
+Wire Wire Line
+	6350 3500 6350 3550
+Wire Wire Line
+	3550 4000 3550 4600
+Wire Wire Line
+	5550 4100 5100 4100
+Text HLabel 3400 3500 0    50   Input ~ 0
+Vin
+Wire Wire Line
+	3400 3500 3550 3500
+$EndSCHEMATC
